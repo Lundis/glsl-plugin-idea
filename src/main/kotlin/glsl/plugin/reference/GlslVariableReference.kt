@@ -66,6 +66,7 @@ class GlslVariableReference(private val element: GlslVariable, textRange: TextRa
      */
     override fun doResolve(filterType: FilterType) {
         try {
+            currentFile = element.getRealVirtualFile()
             resolvedReferences.clear()
             currentFilterType = filterType
             lookupInPostfixStructMember()
