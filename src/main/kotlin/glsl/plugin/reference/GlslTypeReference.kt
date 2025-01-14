@@ -48,6 +48,7 @@ class GlslTypeReference(private val element: GlslType, textRange: TextRange) : G
      */
     override fun doResolve(filterType: FilterType) {
         try {
+            currentFile = element.getRealVirtualFile()
             resolvedReferences.clear()
             currentFilterType = filterType
             resolveType()
