@@ -82,7 +82,7 @@ class GlslVariableReference(private val element: GlslIdentifier, textRange: Text
             }
             lookupInGlobalScope(currentFile, externalDeclaration)
         } catch (_: StopLookupException) {
-            includeFiles.clear()
+            includedFilesStack.clear()
         }
     }
 

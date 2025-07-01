@@ -60,7 +60,7 @@ class GlslTypeReference(private val element: GlslType, textRange: TextRange) : G
             }
             resolveType()
         } catch (_: StopLookupException) {
-            includeFiles.clear()
+            includedFilesStack.clear()
         }
     }
 
